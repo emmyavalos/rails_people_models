@@ -1,0 +1,11 @@
+<h1>My People Maker</h1>
+<div>
+  <ol>
+    <% @people.each do |person| %>
+    <li>
+      <%= link_to person.name, person_path(person) %>
+    </li>
+    <% end %>
+  </ol>
+  <%= link_to "New Person", new_person_path %>
+</div>
